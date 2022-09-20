@@ -1,0 +1,36 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.progress-bar{
+    width: 50%;
+    margin-top: 100px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress-bar::before{
+    content: "";
+    position: absolute;
+    top: 40%;
+    width: 99%;
+    height: 4px;
+    background-color: rgb(190, 190, 190);
+}
+
+
+.progress-step{
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: #161e54;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.progress-step::after {
+    position: absolute;
+    content: attr(data-title);
+    top: calc(100% - 2.7rem);
+}
